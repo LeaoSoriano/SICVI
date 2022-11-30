@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrik-to-fit=no">
+    <!--Biblioteca de boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!--Biblioteca de iconos-->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <!--Tipo de letra-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <!--Estilo de sidebar-->
+    <link rel="stylesheet" href="style/estilo_boostrap.css">
+    <!--Script de datos-->
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <!--Sidebar-->
+    <div class="d-flex">
+        <div id="sidebar-container" class="bg-primary">
+            <div class="logo">
+                <h4 class="text-light font-weight-bold">SICVI</h4>
+            </div>
+            <div class="menu">
+                <!--Links a los distintos menus de la pagina-->
+                <a href="#" class="d-block text-light p-3"><i class="icon ion-md-pulse mr-2 lead"></i> Monitoreo</a>
+                <a href="#" class="d-block text-light p-3"><i class="icon ion-md-laptop mr-2 lead"></i> Controlar</a>
+                <a href="#" class="d-block text-light p-3"><i class="icon ion-md-document mr-2 lead"></i></i>
+                    Documentos</a>
+                <a href="#" class="d-block text-light p-3"><i class="icon ion-md-person mr-2 lead"></i> Perfil</a>
+            </div>
+        </div>
+
+        <!--Barra de navegacion-->
+        <div class="w-100">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <form class="d-flex position-relative my-2 d-inline-block">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-search position-absolute" type="submit"><i
+                                class="icon ion-md-search"></i></button>
+                    </form>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                                        src="img/user.png" class="img-fluid rounded-circle avatar mr-2">
+                                    Usuario
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="content">
+                <section class="py-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <h1 class="font-weight-bold mb-0">Información en tiempo real</h1>
+                            </div>
+                            <div class="col-lg-3 d-flex">
+                                <button class="btn btn-primary w-100 align-self-center">Descargar reporte</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bg-mix">
+                    <div class="container">
+                        <div class="card rounded-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-3 stat my-3">
+                                        <h6 class="text-muted">Temperatura en el aire</h6>
+                                        <h3 class="font-weight-bold"><i class="icon ion-md-thermometer"
+                                                style="display: inline-flex;">
+                                                <h3 id="temp_card"></h3>
+                                            </i> C°</h3>
+                                    </div>
+                                    <div class="col-lg-3 stat my-3">
+                                        <h6 class="text-muted">Humedad en el aire</h6>
+                                        <h3 class="font-weight-bold"><i class="icon ion-md-water"
+                                                style="display: inline-flex;">
+                                                <h3 id="hum_card"></h3>
+                                            </i> %</h3>
+                                    </div>
+                                    <div class="col-lg-3 stat my-3">
+                                        <h6 class="text-muted">Luminosidad</h6>
+                                        <h3 class="font-weight-bold"><i class="icon ion-md-sunny"></i> %</i></h3>
+                                    </div>
+                                    <div class="col-lg-3 my-3">
+                                        <h6 class="text-muted">Humedad en tierra</h6>
+                                        <h3 class="font-weight-bold"><i class="icon ion-md-water"></i> %</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bg-grey">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 my-3">
+                                <div class="card rounded-0">
+                                    <div class="card-header bg-light">
+                                        <h6 class="font-weight-bold mb-0">Grafica</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="chartContainer" style="height: 370px; width:100%;"></div>
+                                        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+                                        <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+                                    </div>
+                                    <div class="col-lg-4 my-3">
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <!--Biblioteca de Boostrap-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+            integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+            integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+            crossorigin="anonymous"></script>
+
+</html>
